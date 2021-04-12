@@ -83,6 +83,12 @@ h1 {
 	font: 3rem var(--louis-george-bold-italic);
 	margin-bottom: 0;
 }
+h2 {
+	font: italic 700 3rem var(--petrona);
+}
+.medium-it-24 {
+	font: italic 400 1.4rem var(--petrona);
+}
 
 .subheader {
 	margin-top: 0;
@@ -179,4 +185,21 @@ button:hover {
 
 .width-70ch {
 	max-width: 70ch;
+}
+
+/* Images */
+
+.w30-50 {
+	min-width: 20%;
+	max-width: 30%;
+}
+
+/* positioning images */
+.pos-b-r {
+	position: absolute;
+	bottom: 15%;
+	right: 10%;
+}
+.relative {
+	position: relative;
 }
