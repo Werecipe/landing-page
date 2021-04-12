@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,300;0,400;1,500;1,800&display=swap");
+
+@font-face {
+	font-family: "Louis George Café Bold";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Louis George Café Bold"),
+		url("./Louis-George-font/Louis-George-Cafe-Bold.woff"), format("woff");
+}
+
+@font-face {
+	font-family: "Louis George Café Bold Italic";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Louis George Café Bold Italic"),
+		url("./Louis-George-font/Louis-George-Cafe-Bold-Italic.woff") format("woff");
+}
+:root {
+	box-sizing: border-box;
+	--petrona: "Petrona", serif;
+	--louis-george-bold-italic: "Louis George Café Bold Italic";
+	--louis-george-bold: "Louis George Café Bold";
+	--color-action: #fe7814;
+	--color-tomato: #ff5548;
+	--color-grey: #707070;
+	--color-black: #010102;
+	--color-bg-back: #010102;
+	--color-bg-hero: #fcf9f3;
+	--color-bg-tomato: #fae8e2;
+	--color-bg-pepper: #fcf6ec;
+	--color-bg-contact: #f6eaf0;
+}
+
+/* Layout */
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	height: 160px;
+}
+
+.flex {
+	display: flex;
+}
+.just-center {
+	justify-content: center;
+}
+.just-space-btw {
+	justify-content: space-between;
+}
+.center {
+	place-content: center;
+}
+.align-center {
+	align-items: center;
+}
+.gap-5rem {
+	gap: 2rem;
+}
+/* margins and paddings */
+
+.m-top-40 {
+	margin-top: 40px;
+}
+.p-all-5rem {
+	padding: 2rem;
+}
+.p-t-b-3rem {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+.p-l-r-7rem {
+	padding-left: 7rem;
+	padding-right: 7rem;
+}
+
+/* Typography */
+
+h1 {
+	font: 3rem var(--louis-george-bold-italic);
+	margin-bottom: 0;
+}
+
+.subheader {
+	margin-top: 0;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+
+.petrona-light {
+	font: 300 1.3rem var(--petrona);
+}
+
+.louise-bold-32px {
+	font: 1.5rem var(--louis-george-bold);
+}
+
+/* button */
+
+.p-button-2-6 {
+	padding: 1rem 5rem;
+}
+button {
+	border-radius: 10px;
+	border: none;
+	box-shadow: 1px 1px 2px var(--color-tomato);
+}
+button:hover {
+	box-shadow: none;
+	transform: translateX(1px);
+}
+
+/* height main divs and sections */
+
+.full-height {
+	min-height: 100vh;
+}
+.hero-height {
+	min-height: calc(100vh - 160px);
+}
+.mid-height {
+	min-height: 60vh;
+}
+.small-height {
+	min-height: 30vh;
+}
+.square-550 {
+	height: 550px;
+	width: 550px;
+}
+
+/* bg colors */
+
+.bg-yellow {
+	background: var(--color-bg-hero);
+}
+.bg-tomato {
+	background: var(--color-bg-tomato);
+}
+.bg-pepper {
+	background: var(--color-bg-pepper);
+}
+.bg-purple {
+	background: var(--color-bg-contact);
+}
+.bg-black {
+	background: var(--color-bg-back);
+}
+.bg-button {
+	background: var(--color-action);
+}
+.bg-white {
+	background: white;
+}
+
+/* colors */
+
+.tomato {
+	color: var(--color-tomato);
+}
+.carrot {
+	color: var(--color-action);
+}
+.black {
+	color: var(--color-black);
+}
+.grey {
+	color: var(--color-grey);
+}
+.white {
+	color: white;
+}
+
+/* hero text */
+
+.width-70ch {
+	max-width: 70ch;
+}
