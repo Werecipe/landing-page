@@ -31,7 +31,13 @@
 	--color-bg-contact: #f6eaf0;
 }
 
-/* Layout */
+*,
+*:focus {
+	outline-color: var(--color-action);
+}
+
+/* Layout 
+--------------------------------*/
 
 body {
 	margin: 0;
@@ -51,33 +57,57 @@ nav {
 .just-space-btw {
 	justify-content: space-between;
 }
+.justify-end {
+	justify-content: flex-end;
+}
+.column {
+	flex-direction: column;
+}
 .center {
 	place-content: center;
 }
 .align-center {
 	align-items: center;
 }
-.gap-5rem {
+.align-start {
+	align-self: flex-start;
+}
+.align-end {
+	align-self: flex-end;
+}
+.gap-2rem {
 	gap: 2rem;
 }
-/* margins and paddings */
+.gap-4rem {
+	gap: 4rem;
+}
+
+.order-1 {
+	order: -1;
+}
+.height100 {
+	height: 100%;
+}
+/* margins and paddings 
+---------------------------------*/
 
 .m-top-40 {
 	margin-top: 40px;
 }
-.p-all-5rem {
+.p-all-2rem {
 	padding: 2rem;
 }
-.p-t-b-3rem {
+.p-t-b-4rem {
 	padding-top: 4rem;
 	padding-bottom: 4rem;
 }
 .p-l-r-7rem {
-	padding-left: 7rem;
-	padding-right: 7rem;
+	padding-left: 10rem;
+	padding-right: 10rem;
 }
 
-/* Typography */
+/* Typography 
+---------------------------------*/
 
 h1 {
 	font: 3rem var(--louis-george-bold-italic);
@@ -86,6 +116,10 @@ h1 {
 h2 {
 	font: italic 700 3rem var(--petrona);
 }
+h3 {
+	font: 2.3rem/40px var(--louis-george-bold);
+}
+
 .medium-it-24 {
 	font: italic 400 1.4rem var(--petrona);
 }
@@ -97,15 +131,23 @@ h2 {
 	text-transform: uppercase;
 }
 
+.petrona-reg-24 {
+	font: 1.5rem/30px var(--petrona);
+}
+
 .petrona-light {
 	font: 300 1.3rem var(--petrona);
 }
 
-.louise-bold-32px {
+.louise-bold-24px {
 	font: 1.5rem var(--louis-george-bold);
 }
+.louise-bold-20px {
+	font: 1.2rem var(--louis-george-bold);
+}
 
-/* button */
+/* button 
+------------------------------------*/
 
 .p-button-2-6 {
 	padding: 1rem 5rem;
@@ -120,7 +162,8 @@ button:hover {
 	transform: translateX(1px);
 }
 
-/* height main divs and sections */
+/* height main divs and sections 
+-----------------------------------*/
 
 .full-height {
 	min-height: 100vh;
@@ -139,7 +182,8 @@ button:hover {
 	width: 550px;
 }
 
-/* bg colors */
+/* bg colors 
+------------------------------*/
 
 .bg-yellow {
 	background: var(--color-bg-hero);
@@ -163,7 +207,8 @@ button:hover {
 	background: white;
 }
 
-/* colors */
+/* colors 
+------------------------------*/
 
 .tomato {
 	color: var(--color-tomato);
@@ -181,25 +226,139 @@ button:hover {
 	color: white;
 }
 
-/* hero text */
+/* hero text
+----------------------------- */
 
 .width-70ch {
 	max-width: 70ch;
 }
 
-/* Images */
-
-.w30-50 {
-	min-width: 20%;
-	max-width: 30%;
+.width-50ch {
+	max-width: 50ch;
 }
 
-/* positioning images */
+/* Images 
+-----------------------------*/
+
+.w200-250 {
+	min-width: 200px;
+	max-width: 250px;
+}
+.width150 {
+	width: 150px;
+}
+
+.width-clamp {
+	width: clamp(350px, 550px, 650px);
+}
+.contain {
+	width: 100%;
+}
+
+/* positioning images
+------------------------------ */
 .pos-b-r {
 	position: absolute;
 	bottom: 15%;
 	right: 10%;
 }
+.pos-b-l {
+	position: absolute;
+	bottom: 15%;
+	left: 10%;
+}
+
 .relative {
 	position: relative;
 }
+
+.pos-b-extra-r {
+	position: absolute;
+	bottom: 15%;
+	right: 0;
+}
+
+/* video 
+--------------------------------*/
+
+.video-container {
+	width: 350px;
+	height: 600px;
+}
+
+.video {
+	height: 100%;
+	width: 100%;
+}
+
+/* form
+------------------------------------- */
+
+input,
+textarea {
+	padding: 1rem;
+	border-radius: 10px;
+	border: none;
+	font: 1rem var(--petrona);
+}
+textarea {
+	height: 20ex;
+}
+
+/* parallax */
+
+/* .parallax {
+	 height: 500px; fallback for older browsers
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
+
+	perspective-origin: center;
+} */
+
+/* .parallax__group {
+	position: relative;
+	height: 500px;fallback for older browsers 
+	height: 150vh;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	display: flex;
+}
+
+.parallax__layer {
+	transform-origin: center;
+} */
+
+/* .parallax__layer--fore {
+	-webkit-transform: translateZ(90px) scale(0.7);
+	transform: translateZ(90px) scale(0.7);
+	z-index: 1;
+} */
+
+/* .parallax__layer--base {
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	z-index: 4;
+}
+
+.parallax__layer--back {
+	-webkit-transform: translateZ(-50vh) scale(2);
+	transform: translateZ(-50vh) scale(2);
+	z-index: 3;  */
+
+/* demo styles
+  --------------------------------------------- */
+
+/* body,
+html {
+	overflow: hidden;
+} */
+
+/* style the groups
+  --------------------------------------------- */
+
+/* #group1 {
+	z-index: 2;
+} */
