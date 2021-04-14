@@ -85,6 +85,10 @@ nav {
 .order-1 {
 	order: -1;
 }
+
+.order {
+	order: 1;
+}
 .height100 {
 	height: 100%;
 }
@@ -99,11 +103,11 @@ nav {
 	flex-wrap: wrap;
 }
 .wrap-reverse {
-	flex-wrap: wrap-reverse;
+	flex-wrap: nowrap;
 }
 
-.hero {
-	flex: 1 1 40%;
+.hero > * {
+	flex: 1 1 100%;
 }
 
 .card {
@@ -112,6 +116,14 @@ nav {
 @media only screen and (max-width: 1680px) {
 	.card {
 		flex: 1 0 250px;
+	}
+}
+@media only screen and (max-width: 1024px) {
+	.wrap-reverse {
+		flex-wrap: wrap-reverse;
+	}
+	.order {
+		order: -1;
 	}
 }
 
@@ -142,7 +154,7 @@ nav {
 	padding: 1rem;
 }
 
-@media only screen and (max-width: 1520px) {
+@media only screen and (max-width: 1550px) {
 	.p-l-r-7rem {
 		padding-left: 5rem;
 		padding-right: 5rem;
@@ -211,6 +223,12 @@ button:hover {
 	transform: translateX(1px);
 }
 
+@media only screen and (max-width: 1024px) {
+	.button-large {
+		padding: 3rem 10rem;
+	}
+}
+
 /* height main divs and sections 
 -----------------------------------*/
 
@@ -227,15 +245,18 @@ button:hover {
 	min-height: 30vh;
 }
 .square-550 {
-	height: 550px;
-	width: 550px;
+	width: 100%;
+	aspect-ratio: 1/1;
 }
 .square-40 {
 	height: 40px;
 	width: 40px;
 }
-/* 
-@media only screen and (max-width: 1520px) {
+.height100 {
+	height: 100%;
+}
+
+/* @media only screen and (max-width: 1380px) {
 	.square-550 {
 		height: 400px;
 		width: 400px;
