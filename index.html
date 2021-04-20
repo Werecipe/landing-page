@@ -14,7 +14,7 @@
 		>
 			<button
 				id="open"
-				class="open no-style show"
+				class="open no-style bg-white-soft show"
 				onclick="addAnimationClass()"
 			>
 				<svg
@@ -34,7 +34,7 @@
 			</button>
 			<button
 				id="close"
-				class="no-style close"
+				class="no-style bg-white-soft close"
 				onclick="removeAnimationClass()"
 			>
 				<svg
@@ -208,11 +208,21 @@
 			>
 				<nav class="flex just-center align-center">
 					<ul class="flex gap-2rem just-center louise-bold-32px align-center">
-						<li><a href="/" class="carrot">Join</a></li>
-						<li><a href="#about" class="carrot">About</a></li>
-						<li><a href="#solutions" class="carrot">Solutions</a></li>
-						<li><a href="#contact" class="carrot">Contact</a></li>
-						<li><a href="/" class="carrot">Recipes</a></li>
+						<li onclick="removeAnimationClass()">
+							<a href="" class="carrot">Join</a>
+						</li>
+						<li onclick="removeAnimationClass()">
+							<a href="#about" class="carrot">About</a>
+						</li>
+						<li onclick="removeAnimationClass()">
+							<a href="#solutions" class="carrot">Solutions</a>
+						</li>
+						<li onclick="removeAnimationClass()">
+							<a href="#contact" class="carrot">Contact</a>
+						</li>
+						<li onclick="removeAnimationClass()">
+							<a href="" class="carrot">Recipes</a>
+						</li>
 					</ul>
 				</nav>
 			</div>
