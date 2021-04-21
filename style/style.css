@@ -29,6 +29,9 @@ html {
 	--color-tomato: #ff5548;
 	--color-grey: #707070;
 	--color-black: #010102;
+	--color-facebook: #4267b2;
+	--color-instagram: #c13584;
+	--color-twitter: #1da1f2;
 	--color-bg-back: #010102;
 	--color-bg-hero: #fcf9f3f0;
 	--color-bg-tomato: #fae8e2f0;
@@ -170,6 +173,15 @@ html {
 .grey {
 	color: var(--color-grey);
 }
+.facebook {
+	color: var(--color-facebook);
+}
+.instagram {
+	color: var(--color-instagram);
+}
+.twitter {
+	color: var(--color-twitter);
+}
 .white {
 	color: white;
 }
@@ -185,6 +197,11 @@ body {
 
 nav {
 	height: 160px;
+}
+.position-fixed {
+	position: fixed;
+	right: 0;
+	z-index: 98;
 }
 
 .flex {
@@ -216,6 +233,9 @@ nav {
 }
 .self-center {
 	align-self: center;
+}
+.gap-1rem {
+	gap: 1rem;
 }
 .gap-2rem {
 	gap: 2rem;
@@ -315,9 +335,7 @@ nav {
 	.info-container {
 		flex-wrap: wrap;
 	}
-	.gap-1rem {
-		gap: 1rem;
-	}
+
 	.al-flex-start {
 		align-items: flex-start;
 	}
@@ -544,11 +562,12 @@ button:hover {
 --------------------------------*/
 
 .logo {
-	width: 160px;
+	width: 100px;
 }
 
 ul {
 	list-style: none;
+	padding: 0;
 }
 nav a {
 	text-decoration: none;
@@ -600,7 +619,7 @@ nav a:active {
 	.close,
 	.open {
 		position: fixed;
-		margin: 0 0 0 0;
+		margin: 2rem 0 0 0;
 		z-index: 98;
 	}
 	.show {
@@ -659,7 +678,7 @@ nav a:active {
 }
 
 .width-clamp {
-	width: clamp(250px, 450px, 550px);
+	width: clamp(250px, 350px, 450px);
 }
 .contain {
 	width: 100%;
@@ -667,18 +686,18 @@ nav a:active {
 
 @media only screen and (max-width: 1520px) {
 	.width-clamp {
-		width: clamp(150px, 350px, 450px);
+		width: clamp(250px, 300px, 350px);
 	}
 }
 
 @media only screen and (max-width: 1023px) {
 	.width-clamp {
-		width: clamp(150px, 250px, 300px);
+		width: clamp(125px, 275px, 350px);
 	}
 }
 @media only screen and (max-width: 767px) {
 	.width-clamp {
-		width: clamp(150px, 200px, 250px);
+		width: clamp(125px, 170px, 200px);
 	}
 }
 
@@ -686,13 +705,15 @@ nav a:active {
 ------------------------------ */
 .pos-b-r {
 	position: absolute;
-	bottom: 0%;
+	bottom: 5%;
 	right: 10%;
+	z-index: 2;
 }
 .pos-b-l {
 	position: absolute;
-	bottom: 0%;
+	bottom: 5%;
 	left: 10%;
+	z-index: 2;
 }
 
 .relative {
@@ -701,8 +722,9 @@ nav a:active {
 
 .pos-b-extra-r {
 	position: absolute;
-	bottom: 0%;
+	bottom: 5%;
 	right: 0;
+	z-index: 2;
 }
 
 @media only screen and (max-width: 767px) {
@@ -816,7 +838,7 @@ html {
 /* #group1 {
 	z-index: 2;
 } */
-
+/* 
 .parallax-container {
 	position: relative;
 	width: 100%;
@@ -838,4 +860,4 @@ html {
 	-webkit-transform: translateZ(0px) scale(1);
 	transform: translateZ(0px) scale(1);
 	height: 840px;
-}
+} */

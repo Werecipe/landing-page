@@ -3,7 +3,6 @@
 const navigation = document.getElementById("navigation");
 const closeBtn = document.getElementById("close");
 const openBtn = document.getElementById("open");
-console.log(navigation);
 
 function addAnimationClass() {
     navigation.classList.add("scale-in-tl");
