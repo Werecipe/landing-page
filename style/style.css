@@ -234,9 +234,6 @@ nav {
 .self-center {
 	align-self: center;
 }
-.gap-1rem {
-	gap: 1rem;
-}
 .gap-2rem {
 	gap: 2rem;
 }
@@ -339,6 +336,9 @@ nav {
 	.al-flex-start {
 		align-items: flex-start;
 	}
+	.gap-1rem {
+		gap: 1rem;
+	}
 }
 
 /* margins and paddings 
@@ -382,6 +382,17 @@ nav {
 	.p-l-r-2rem {
 		padding-left: 10px;
 		padding-right: 10px;
+	}
+	.p-t-b-1rem {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+	.p-t-b-0 {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.m-top-20 {
+		margin-top: 20px;
 	}
 }
 
@@ -486,6 +497,9 @@ h3 {
 	.petrona-reg-16-center {
 		font: 1rem/24px var(--petrona);
 	}
+	.louise-bold-20px-phone {
+		font: 1.2rem var(--louis-george-bold);
+	}
 }
 
 /* button 
@@ -516,9 +530,12 @@ button:hover {
 	}
 }
 @media only screen and (max-width: 767px) {
-	.button-large,
 	.p-button-2-6 {
 		padding: 1rem 2rem;
+	}
+
+	.button-large {
+		padding: 2rem 6rem;
 	}
 }
 
@@ -555,6 +572,12 @@ button:hover {
 @media only screen and (max-width: 767px) {
 	.full-height {
 		min-height: 150vh;
+	}
+	.height160 {
+		height: 100px;
+	}
+	.hero-height {
+		min-height: calc(100vh - 80px);
 	}
 }
 
@@ -740,8 +763,7 @@ nav a:active {
 	}
 	.pos-b-extra-r {
 		position: relative;
-		bottom: initial;
-		right: initial;
+		transform: rotate(-90deg);
 	}
 }
 
