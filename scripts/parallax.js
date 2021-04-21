@@ -13,6 +13,7 @@ function parallaxDown() {
         overflow: true,
         delay: 0.3,
     });
+    console.log("down");
 }
     
 function parallaxRight() {
@@ -23,6 +24,13 @@ function parallaxRight() {
         overflow: true,
         delay: 0.3,
     });
+    console.log("right");
 }
-width < 768 ? parallaxRight() : parallaxDown();
+let parallax = width < 768 ? true : false;
+if (parallax) {
+    parallaxRight();
+} else {
+    parallaxDown();
+    }
+
 
