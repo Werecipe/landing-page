@@ -508,6 +508,10 @@ h3 {
 .p-button-2-6 {
 	padding: 1rem 5rem;
 }
+
+.p-button-3-9 {
+	padding: 3rem 9rem;
+}
 button {
 	border-radius: 10px;
 	border: none;
