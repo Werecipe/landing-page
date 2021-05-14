@@ -369,9 +369,9 @@
 								<h1>
 									Explore and save recipes from all over the world
 								</h1>
-								<h4 class="subheader grey petrona-light uppercase">
+								<p class="subheader grey petrona-light uppercase">
 									Search. Save. Own. Cook. Share. Repeat.
-								</h4>
+								</p>
 							</div>
 							<div class="width-70ch margin-auto">
 								<p class="petrona-light grey m-top-40">
@@ -775,7 +775,9 @@
 			>
 				<div class="info-container flex gap-2rem">
 					<div class="video-container p-all-2rem p-l-r-0">
-						<div class="video"></div>
+						<div class="bg-white video">
+							<lottie-player src="https://assets9.lottiefiles.com/packages/lf20_y1mszfhq.json"  background="transparent"  speed="1"  style="width: 100%; height: 100%;"  loop controls autoplay></lottie-player>
+						</div>
 					</div>
 					<div
 						class="
@@ -965,27 +967,38 @@
 							we can.
 						</p>
 						<form id="form" class="flex column gap-2rem">
-							<input
-								type="email"
-								name="email"
-								id="email"
-								placeholder="email"
-								required
-							/>
+							<div class="flex column">
+								<label for="email" class="p-all-1rem">Email</label>
+								<input
+									type="email"
+									name="email"
+									id="email"
+									placeholder="email"
+									required
+								/>
+							</div>
 
-							<input
-								type="text"
-								name="name"
-								id="name"
-								placeholder="Name"
-								required
-							/>
+							<div class="flex column">
+								<label for="name" class="p-all-1rem">Name</label>
+								<input
+									type="text"
+									name="name"
+									id="name"
+									placeholder="Name"
+									required
+								/>
+							</div>
 
-							<textarea
-								name="message"
-								id="message"
-								placeholder="message"
-							></textarea>
+							<div class="flex column">
+								<label for="message" class="p-all-1rem"
+									>Message</label
+								>
+								<textarea
+									name="message"
+									id="message"
+									placeholder="message"
+								></textarea>
+							</div>
 
 							<button
 								type="submit"

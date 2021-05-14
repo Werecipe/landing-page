@@ -5,7 +5,8 @@
 	font-style: normal;
 	font-weight: normal;
 	src: local("Louis George Café Bold"),
-		url("./Louis-George-font/Louis-George-Cafe-Bold.woff"), format("woff");
+		url("./Louis-George-font/Louis-George-Cafe-Bold.woff"),
+		format("woff");
 }
 
 @font-face {
@@ -13,7 +14,8 @@
 	font-style: normal;
 	font-weight: normal;
 	src: local("Louis George Café Bold Italic"),
-		url("./Louis-George-font/Louis-George-Cafe-Bold-Italic.woff") format("woff");
+		url("./Louis-George-font/Louis-George-Cafe-Bold-Italic.woff")
+			format("woff");
 }
 
 html {
@@ -32,7 +34,7 @@ html {
 	--color-facebook: #4267b2;
 	--color-instagram: #c13584;
 	--color-twitter: #1da1f2;
-	--color-bg-back: #010102;
+	--color-bg-black: #010102;
 	--color-bg-hero: #fcf9f3f0;
 	--color-bg-tomato: #fae8e2f0;
 	--color-bg-pepper: #fcf6ecf0;
@@ -140,7 +142,7 @@ html {
 	background: var(--color-bg-contact);
 }
 .bg-black {
-	background: var(--color-bg-back);
+	background: var(--color-bg-black);
 }
 .bg-button {
 	background: var(--color-action);
@@ -616,6 +618,12 @@ nav a:active {
 	color: var(--color-tomato);
 }
 
+footer a:link,
+footer a:active,
+footer a:visited {
+	color: white;
+}
+
 @media only screen and (max-width: 1024px) {
 	.navigation {
 		position: fixed;
@@ -658,16 +666,16 @@ nav a:active {
 	}
 
 	.scale-in-tl {
-		-webkit-animation: scale-in-tl 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+		-webkit-animation: scale-in-tl 0.2s
+			cubic-bezier(0.25, 0.46, 0.45, 0.94) alternate both;
+		animation: scale-in-tl 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
 			alternate both;
-		animation: scale-in-tl 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) alternate
-			both;
 	}
 	.scale-out-tl {
-		-webkit-animation: scale-out-tl 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+		-webkit-animation: scale-out-tl 0.2s
+			cubic-bezier(0.55, 0.085, 0.68, 0.53) alternate both;
+		animation: scale-out-tl 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53)
 			alternate both;
-		animation: scale-out-tl 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) alternate
-			both;
 	}
 }
 
@@ -783,7 +791,18 @@ nav a:active {
 .video {
 	height: 100%;
 	width: 100%;
-	background: center / contain no-repeat url(../assets/2.3\ mil\ video.png);
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px #01010220;
+}
+
+lottie-player {
+	--lottie-player-toolbar-height: 50px;
+	--lottie-player-toolbar-background-color: transparent;
+	--lottie-player-toolbar-icon-color: var(--color-action);
+	--lottie-player-toolbar-icon-hover-color: var(--color-tomato);
+	--lottie-player-toolbar-icon-active-color: var(--color-tomato);
+	--lottie-player-seeker-track-color: var(--color-grey);
+	--lottie-player-seeker-thumb-color: var(--color-action);
 }
 @media only screen and (min-width: 768px) {
 	.video-container {
@@ -806,84 +825,3 @@ textarea {
 textarea {
 	height: 20ex;
 }
-
-/* parallax */
-
-/* .parallax {
-	 height: 500px; fallback for older browsers
-	height: 100vh;
-	overflow-x: hidden;
-	overflow-y: auto;
-	-webkit-perspective: 1000px;
-	perspective: 1000px;
-
-	perspective-origin: center;
-} */
-
-/* .parallax__group {
-	position: relative;
-	height: 500px;fallback for older browsers 
-	height: 150vh;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	display: flex;
-}
-
-.parallax__layer {
-	transform-origin: center;
-} */
-
-/* .parallax__layer--fore {
-	-webkit-transform: translateZ(90px) scale(0.7);
-	transform: translateZ(90px) scale(0.7);
-	z-index: 1;
-} */
-
-/* .parallax__layer--base {
-	-webkit-transform: translateZ(0);
-	transform: translateZ(0);
-	z-index: 4;
-}
-
-.parallax__layer--back {
-	-webkit-transform: translateZ(-50vh) scale(2);
-	transform: translateZ(-50vh) scale(2);
-	z-index: 3;  */
-
-/* demo styles
-  --------------------------------------------- */
-
-/* body,
-html {
-	overflow: hidden;
-} */
-
-/* style the groups
-  --------------------------------------------- */
-
-/* #group1 {
-	z-index: 2;
-} */
-/* 
-.parallax-container {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	overflow-x: hidden;
-	overflow-y: scroll;
-	-webkit-perspective: 8px;
-	perspective: 8px;
-	-webkit-perspective-origin: 0%;
-	perspective-origin: 0%;
-}
-
-.parallax-element {
-	position: absolute;
-	-webkit-transform-origin: 0 50%;
-	transform-origin: 0 50%;
-	width: 420px;
-	height: 420px;
-	-webkit-transform: translateZ(0px) scale(1);
-	transform: translateZ(0px) scale(1);
-	height: 840px;
-} */
