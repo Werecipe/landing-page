@@ -331,6 +331,7 @@ nav {
 		align-self: flex-end;
 		margin-right: -10px;
 	}
+
 	.info-container {
 		flex-wrap: wrap;
 	}
@@ -736,6 +737,9 @@ footer a:visited {
 @media only screen and (max-width: 767px) {
 	.width-clamp {
 		width: clamp(125px, 170px, 200px);
+	}
+	.image {
+		display: none;
 	}
 }
 
