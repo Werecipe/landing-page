@@ -786,9 +786,10 @@ footer a:visited {
 --------------------------------*/
 
 .video-container {
-	max-width: 100%;
+	max-width: 350px;
 	height: auto;
 	aspect-ratio: 9/16;
+	margin: 0 auto;
 }
 
 .video {
@@ -807,10 +808,9 @@ lottie-player {
 	--lottie-player-seeker-track-color: var(--color-grey);
 	--lottie-player-seeker-thumb-color: var(--color-action);
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
 	.video-container {
-		max-width: 350px;
-		height: 600px;
+		max-width: 280px;
 		aspect-ratio: 9/16;
 	}
 }
